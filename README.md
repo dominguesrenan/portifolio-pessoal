@@ -58,3 +58,10 @@ git commit -m "Add/Imp | Portifolio Pessoal | $(date '+%d/%m/%Y - %H:%M:%S')"
 
 git push -uf origin main
 ```
+
+---
+
+## Links
+
+- [GitHub](https://github.com/dominguesrenan/portifolio-pessoal)
+- [LinkedIn](https://www.linkedin.com/in/renan-domingues-4808b2172/)

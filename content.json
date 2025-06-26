@@ -1,0 +1,190 @@
+{
+    "site": {
+        "name": "Portifólio Pessoal",
+        "title": "Portifólio Pessoal",
+        "description": "Portifólio profissional criado com React e TypeScript",
+        "author": "Desenvolvedor",
+        "keywords": "portfolio, react, typescript, developer, frontend",
+        "logo": "/placeholder.svg",
+        "favicon": "/favicon.ico"
+    },
+    "menu": [
+        { "label": "Home", "link": "/", "type": "internal" },
+        { "label": "Sobre", "link": "#about", "type": "anchor" },
+        { "label": "Habilidades", "link": "#skills", "type": "anchor" },
+        { "label": "Projetos", "link": "/projects", "type": "internal" },
+        { "label": "Contato", "link": "#contact", "type": "anchor" }
+    ],
+    "hero": {
+        "title": "Desenvolvedor Full Stack",
+        "subtitle": "Criando experiências digitais incríveis",
+        "description": "Sou um desenvolvedor apaixonado por criar soluções inovadoras e interfaces intuitivas. Especializado em React, TypeScript e Node.js.",
+        "image": "/placeholder.svg",
+        "buttons": [
+            {
+                "text": "Ver Projetos",
+                "link": "#projects",
+                "type": "primary"
+            },
+            {
+                "text": "Entre em Contato",
+                "link": "#contact",
+                "type": "secondary"
+            }
+        ]
+    },
+    "about": {
+        "title": "Sobre Mim",
+        "subtitle": "Olá, sou Alex Silva",
+        "paragraph1": "Desenvolvedor Full Stack com mais de 5 anos de experiência criando aplicações web e móveis. Minha paixão é transformar ideias complexas em interfaces elegantes e funcionais.",
+        "paragraph2": "Ao longo da minha carreira, trabalhei em diversos projetos, desde aplicações corporativas até startups inovadoras. Estou sempre buscando aprender novas tecnologias e aprimorar minhas habilidades para oferecer as melhores soluções.",
+        "image": "/placeholder.svg",
+        "values": [
+            {
+                "title": "+ 50",
+                "description": "Projetos Completos"
+            },
+            {
+                "title": "+ 30",
+                "description": "Clientes Satisfeitos"
+            },
+            {
+                "title": "+ 5",
+                "description": "Anos de Experiência"
+            }
+        ]
+    },
+    "skills": {
+        "title": "Minhas Habilidades",
+        "subtitle": "Estas são as tecnologias e ferramentas com as quais tenho trabalhado. Estou constantemente aprendendo e aprimorando minhas habilidades.",
+        "categories": ["frontend", "backend", "design", "other"]
+    },
+    "skills_list": [
+        {
+            "name": "HTML",
+            "level": "expert",
+            "percentage": 95,
+            "category": "frontend"
+        },
+        {
+            "name": "CSS",
+            "level": "advanced",
+            "percentage": 85,
+            "category": "frontend"
+        },
+        {
+            "name": "JavaScript",
+            "level": "advanced",
+            "percentage": 80,
+            "category": "frontend"
+        },
+        {
+            "name": "React",
+            "level": "intermediate",
+            "percentage": 75,
+            "category": "frontend"
+        },
+        {
+            "name": "TypeScript",
+            "level": "intermediate",
+            "percentage": 70,
+            "category": "frontend"
+        },
+        {
+            "name": "Node.js",
+            "level": "intermediate",
+            "percentage": 65,
+            "category": "backend"
+        },
+        {
+            "name": "Express",
+            "level": "beginner",
+            "percentage": 60,
+            "category": "backend"
+        },
+        {
+            "name": "MongoDB",
+            "level": "beginner",
+            "percentage": 55,
+            "category": "backend"
+        },
+        {
+            "name": "Python",
+            "level": "intermediate",
+            "percentage": 70,
+            "category": "backend"
+        },
+        {
+            "name": "UI Design",
+            "level": "advanced",
+            "percentage": 80,
+            "category": "design"
+        },
+        {
+            "name": "Figma",
+            "level": "intermediate",
+            "percentage": 65,
+            "category": "design"
+        },
+        {
+            "name": "Git",
+            "level": "advanced",
+            "percentage": 80,
+            "category": "other"
+        }
+    ],
+    "projects": {
+        "title": "Projetos",
+        "subtitle": "Alguns dos meus trabalhos",
+        "items": [
+            {
+                "title": "E-commerce Platform",
+                "description": "Plataforma completa de e-commerce com React e Node.js",
+                "image": "/placeholder.svg",
+                "technologies": ["React", "Node.js", "MongoDB"],
+                "link": "#",
+                "github": "#"
+            },
+            {
+                "title": "Task Manager App",
+                "description": "Aplicativo de gerenciamento de tarefas com drag and drop",
+                "image": "/placeholder.svg",
+                "technologies": ["React", "TypeScript", "Firebase"],
+                "link": "#",
+                "github": "#"
+            },
+            {
+                "title": "Portfolio Website",
+                "description": "Site portfolio responsivo com animações",
+                "image": "/placeholder.svg",
+                "technologies": ["React", "Framer Motion", "Tailwind"],
+                "link": "#",
+                "github": "#"
+            }
+        ]
+    },
+    "contact": {
+        "title": "Entre em Contato",
+        "subtitle": "Vamos trabalhar juntos",
+        "description": "Estou sempre aberto a novas oportunidades e projetos interessantes. Entre em contato para conversarmos!",
+        "info": {
+            "email": "contato@exemplo.com",
+            "phone": "(11) 99999-9999",
+            "location": "São Paulo, SP"
+        },
+        "social": {
+            "github": "https://github.com/seu-usuario",
+            "twitter": "https://twitter.com/seu-usuario",
+            "linkedin": "https://linkedin.com/in/seu-usuario"
+        }
+    },
+    "footer": {
+        "description": "Desenvolvedor Full Stack apaixonado por criar experiências digitais incríveis.",
+        "links": [
+            { "label": "Home", "link": "/" },
+            { "label": "Sobre", "link": "#about" },
+            { "label": "Projetos", "link": "/projects" },
+            { "label": "Contato", "link": "#contact" }
+        ]
+    }
+} 

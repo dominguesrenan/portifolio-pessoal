@@ -1,130 +1,207 @@
-
 export interface Skill {
   name: string;
-  level: 'beginner' | 'intermediate' | 'advanced' | 'expert';
+  level: "beginner" | "intermediate" | "advanced" | "expert";
   percentage: number;
-  category: 'frontend' | 'backend' | 'design' | 'infraestructure' | 'other';
+  category: "frontend" | "backend" | "design" | "infraestructure" | "other";
 }
 
 export const skills: Skill[] = [
   {
     name: "HTML",
-    level: "expert",
+    level: "Avançado",
     percentage: 95,
-    category: "frontend"
+    category: "frontend",
   },
   {
     name: "CSS",
-    level: "advanced",
+    level: "Avançado",
     percentage: 85,
-    category: "frontend"
+    category: "frontend",
   },
   {
     name: "Sass/Scss",
-    level: "advanced",
+    level: "Avançado",
     percentage: 85,
-    category: "frontend"
+    category: "frontend",
   },
   {
-    name: "JavaScript",
-    level: "advanced",
+    name: "JavaScript (ES6+)",
+    level: "Avançado",
     percentage: 80,
-    category: "frontend"
-  },
-  {
-    name: "Vue.js",
-    level: "intermediate",
-    percentage: 75,
-    category: "frontend"
-  },
-  {
-    name: "React",
-    level: "intermediate",
-    percentage: 75,
-    category: "frontend"
+    category: "frontend",
   },
   {
     name: "TypeScript",
-    level: "intermediate",
-    percentage: 70,
-    category: "frontend"
+    level: "Avançado",
+    percentage: 80,
+    category: "frontend",
+  },
+  {
+    name: "React",
+    level: "Intermediário",
+    percentage: 75,
+    category: "frontend",
+  },
+  {
+    name: "Vue.js",
+    level: "Intermediário",
+    percentage: 75,
+    category: "frontend",
+  },
+  {
+    name: "Tailwind CSS",
+    level: "Intermediário",
+    percentage: 75,
+    category: "frontend",
+  },
+  {
+    name: "Shadcn UI",
+    level: "Intermediário",
+    percentage: 75,
+    category: "frontend",
+  },
+  {
+    name: "Vite",
+    level: "Intermediário",
+    percentage: 75,
+    category: "frontend",
+  },
+  {
+    name: "Responsividade (Mobile First)",
+    level: "Avançado",
+    percentage: 75,
+    category: "frontend",
+  },
+  {
+    name: "PHP 8+",
+    level: "Avançado",
+    percentage: 60,
+    category: "backend",
+  },
+  {
+    name: "Laravel 10+",
+    level: "Avançado",
+    percentage: 60,
+    category: "backend",
   },
   {
     name: "Node.js",
-    level: "intermediate",
+    level: "Avançado",
     percentage: 65,
-    category: "backend"
+    category: "backend",
   },
   {
-    name: "Express",
-    level: "beginner",
+    name: "Express.js",
+    level: "Intermediário",
     percentage: 60,
-    category: "backend"
-  },
-  {
-    name: "PHP 8",
-    level: "beginner",
-    percentage: 60,
-    category: "backend"
-  },
-  {
-    name: "Laravel",
-    level: "beginner",
-    percentage: 60,
-    category: "backend"
-  },
-  {
-    name: "MongoDB",
-    level: "beginner",
-    percentage: 55,
-    category: "backend"
+    category: "backend",
   },
   {
     name: "MySQL",
-    level: "beginner",
+    level: "Avançado",
     percentage: 55,
-    category: "backend"
+    category: "backend",
   },
   {
-    name: "Python",
-    level: "intermediate",
+    name: "PostgreSQL",
+    level: "Intermediário",
+    percentage: 55,
+    category: "backend",
+  },
+  {
+    name: "MongoDB",
+    level: "Avançado",
+    percentage: 55,
+    category: "backend",
+  },
+  {
+    name: "REST APIs",
+    level: "Avançado",
     percentage: 70,
-    category: "backend"
+    category: "backend",
   },
   {
     name: "Docker",
-    level: "intermediate",
+    level: "Avançado",
     percentage: 70,
-    category: "infraestructure"
+    category: "infraestructure",
   },
   {
-    name: "Apache",
-    level: "intermediate",
+    name: "Docker Compose",
+    level: "Avançado",
     percentage: 70,
-    category: "infraestructure"
+    category: "infraestructure",
   },
   {
     name: "Nginx",
-    level: "intermediate",
+    level: "Avançado",
     percentage: 70,
-    category: "infraestructure"
+    category: "infraestructure",
+  },
+  {
+    name: "Apache",
+    level: "Intermediário",
+    percentage: 70,
+    category: "infraestructure",
+  },
+  {
+    name: "Kubernetes (k8s)",
+    level: "Iniciante",
+    percentage: 70,
+    category: "infraestructure",
+  },
+  {
+    name: "CI/CD (Deploy Automatizado)",
+    level: "Intermediário",
+    percentage: 70,
+    category: "infraestructure",
   },
   {
     name: "UI/UX Design",
-    level: "advanced",
+    level: "Intermediário",
     percentage: 80,
-    category: "design"
+    category: "design",
   },
   {
     name: "Figma",
-    level: "intermediate",
+    level: "Intermediário",
     percentage: 65,
-    category: "design"
+    category: "design",
   },
   {
     name: "Git",
-    level: "advanced",
+    level: "Avançado",
     percentage: 80,
-    category: "other"
-  }
+    category: "other",
+  },
+  {
+    name: "ESLint / Prettier",
+    level: "Avançado",
+    percentage: 80,
+    category: "other",
+  },
+  {
+    name: "Webpack / Vite",
+    level: "Avançado",
+    percentage: 80,
+    category: "other",
+  },
+  {
+    name: "Jira / Trello",
+    level: "Avançado",
+    percentage: 80,
+    category: "other",
+  },
+  {
+    name: "Integração com APIs REST/GraphQL",
+    level: "Avançado",
+    percentage: 80,
+    category: "other",
+  },
+  {
+    name: "Testes (Vitest / Jest)",
+    level: "Intermediário",
+    percentage: 80,
+    category: "other",
+  },
 ];

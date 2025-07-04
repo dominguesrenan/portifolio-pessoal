@@ -15,7 +15,11 @@ const SkillsSection = () => {
       : skills.filter((skill) => skill.category === activeCategory);
 
   return (
-    <Section id="skills" title={siteConfig.skills.title} subtitle={siteConfig.skills.subtitle}>
+    <Section
+      id="skills"
+      title={siteConfig.skills.title}
+      subtitle={siteConfig.skills.subtitle}
+    >
       <div className="container mx-auto">
         <div className="flex justify-center flex-wrap gap-2 mb-10">
           <Button

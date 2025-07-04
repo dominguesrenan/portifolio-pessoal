@@ -12,29 +12,39 @@ const Hero = () => {
 
   const heroData = siteConfig.hero || {};
   const siteData = siteConfig.site || {};
-  
+
   return (
     <section className="min-h-screen flex items-center pt-16 px-4 bg-gradient-to-br from-background to-secondary/30">
       <div className="container mx-auto">
         <div className="grid md:grid-cols-2 gap-10 items-center">
           <div className="text-center md:text-left">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight animate-fade-in opacity-0" style={{ animationDelay: '0.2s' }}>
+            <h1
+              className="text-4xl md:text-6xl font-bold mb-6 leading-tight animate-fade-in opacity-0"
+              style={{ animationDelay: "0.2s" }}
+            >
               {heroData.title || "Desenvolvedor Full Stack"}
             </h1>
-            <p className="text-lg md:text-xl text-muted-foreground mb-8 animate-fade-in opacity-0" style={{ animationDelay: '0.4s' }}>
-              {heroData.description || "Transformando ideias em experiências digitais impressionantes com foco em design e funcionalidade."}
+            <p
+              className="text-lg md:text-xl text-muted-foreground mb-8 animate-fade-in opacity-0"
+              style={{ animationDelay: "0.4s" }}
+            >
+              {heroData.description ||
+                "Transformando ideias em experiências digitais impressionantes com foco em design e funcionalidade."}
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start animate-fade-in opacity-0" style={{ animationDelay: '0.6s' }}>
+            <div
+              className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start animate-fade-in opacity-0"
+              style={{ animationDelay: "0.6s" }}
+            >
               {heroData.buttons?.map((button: any, index: number) => (
-                <Button 
+                <Button
                   key={index}
-                  size="lg" 
-                  variant={button.type === 'primary' ? 'default' : 'outline'}
+                  size="lg"
+                  variant={button.type === "primary" ? "default" : "outline"}
                   onClick={() => {
-                    if (button.link?.startsWith('#')) {
+                    if (button.link?.startsWith("#")) {
                       scrollToSection(button.link.substring(1));
                     } else if (button.link) {
-                      window.open(button.link, '_blank');
+                      window.open(button.link, "_blank");
                     }
                   }}
                 >
@@ -42,7 +52,7 @@ const Hero = () => {
                 </Button>
               )) || (
                 <>
-                  <Button size="lg" onClick={() => scrollToSection('projects')}>
+                  <Button size="lg" onClick={() => scrollToSection("projects")}>
                     Ver Projetos
                   </Button>
                   <Button variant="outline" size="lg">
@@ -52,24 +62,33 @@ const Hero = () => {
                 </>
               )}
             </div>
-            <div className="mt-16 hidden md:block animate-fade-in opacity-0" style={{ animationDelay: '0.8s' }}>
-              <Button 
-                variant="ghost" 
-                size="icon" 
+            <div
+              className="mt-16 hidden md:block animate-fade-in opacity-0"
+              style={{ animationDelay: "0.8s" }}
+            >
+              <Button
+                variant="ghost"
+                size="icon"
                 className="rounded-full animate-bounce"
-                onClick={() => scrollToSection('about')}
+                onClick={() => scrollToSection("about")}
               >
                 <ArrowDown />
               </Button>
             </div>
           </div>
-          
-          <div className="hidden md:flex justify-end animate-fade-in opacity-0" style={{ animationDelay: '0.6s' }}>
+
+          <div
+            className="hidden md:flex justify-end animate-fade-in opacity-0"
+            style={{ animationDelay: "0.6s" }}
+          >
             <div className="relative">
               <div className="absolute -inset-4 rounded-full bg-primary/20 blur-lg"></div>
-              <img 
-                src={heroData.image || "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d"} 
-                alt={heroData.title || "Developer working"} 
+              <img
+                src={
+                  heroData.image ||
+                  "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d"
+                }
+                alt={heroData.title || "Developer working"}
                 className="rounded-lg relative z-10 shadow-xl"
               />
             </div>

@@ -15,10 +15,10 @@ const HeroSection = () => {
   };
 
   const handleButtonClick = (button: any) => {
-    if (button.link?.startsWith('#')) {
+    if (button.link?.startsWith("#")) {
       scrollToSection(button.link.substring(1));
     } else if (button.link) {
-      window.open(button.link, '_blank');
+      window.open(button.link, "_blank");
     }
   };
 
@@ -35,12 +35,12 @@ const HeroSection = () => {
             {hero.buttons?.map((button, index) => (
               <Button
                 key={index}
-                variant={button.type === 'primary' ? 'default' : 'outline'}
+                variant={button.type === "primary" ? "default" : "outline"}
                 onClick={() => handleButtonClick(button)}
               >
                 {button.text}
-                {button.type === 'primary' && <MoveRight className="ml-2" />}
-                {button.type === 'secondary' && <Download className="mr-2" />}
+                {button.type === "primary" && <MoveRight className="ml-2" />}
+                {button.type === "secondary" && <Download className="mr-2" />}
               </Button>
             ))}
           </div>
@@ -57,4 +57,4 @@ const HeroSection = () => {
   );
 };
 
-export default HeroSection; 
+export default HeroSection;

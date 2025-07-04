@@ -1,11 +1,18 @@
-import { useState } from 'react';
-import { useForm } from 'react-hook-form';
-import { Mail, Send, Phone, MapPin } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
-import { toast } from 'sonner';
+import { useState } from "react";
+import { useForm } from "react-hook-form";
+import { Mail, Send, Phone, MapPin } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "@/components/ui/form";
+import { toast } from "sonner";
 import { siteConfig } from "@/data/site-config";
 import Section from "./Section";
 
@@ -19,25 +26,25 @@ interface FormValues {
 const ContactSection = () => {
   const { contact } = siteConfig;
   const [isSubmitting, setIsSubmitting] = useState(false);
-  
+
   const form = useForm<FormValues>({
     defaultValues: {
-      name: '',
-      email: '',
-      subject: '',
-      message: ''
-    }
+      name: "",
+      email: "",
+      subject: "",
+      message: "",
+    },
   });
 
   const onSubmit = async (data: FormValues) => {
     setIsSubmitting(true);
-    
+
     // Simulação de envio de formulário
-    await new Promise(resolve => setTimeout(resolve, 1500));
-    
-    console.log('Form data:', data);
-    toast.success('Mensagem enviada com sucesso!');
-    
+    await new Promise((resolve) => setTimeout(resolve, 1500));
+
+    console.log("Form data:", data);
+    toast.success("Mensagem enviada com sucesso!");
+
     form.reset();
     setIsSubmitting(false);
   };
@@ -66,7 +73,7 @@ const ContactSection = () => {
                     </FormItem>
                   )}
                 />
-                
+
                 <FormField
                   control={form.control}
                   name="email"
@@ -74,7 +81,11 @@ const ContactSection = () => {
                     <FormItem>
                       <FormLabel>Email</FormLabel>
                       <FormControl>
-                        <Input type="email" placeholder="Seu email" {...field} />
+                        <Input
+                          type="email"
+                          placeholder="Seu email"
+                          {...field}
+                        />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -103,10 +114,10 @@ const ContactSection = () => {
                   <FormItem>
                     <FormLabel>Mensagem</FormLabel>
                     <FormControl>
-                      <Textarea 
-                        placeholder="Escreva sua mensagem aqui..." 
-                        className="min-h-32" 
-                        {...field} 
+                      <Textarea
+                        placeholder="Escreva sua mensagem aqui..."
+                        className="min-h-32"
+                        {...field}
                       />
                     </FormControl>
                     <FormMessage />
@@ -115,8 +126,8 @@ const ContactSection = () => {
               />
 
               <div className="flex justify-end">
-                <Button 
-                  type="submit" 
+                <Button
+                  type="submit"
                   disabled={isSubmitting}
                   className="w-full md:w-auto"
                 >

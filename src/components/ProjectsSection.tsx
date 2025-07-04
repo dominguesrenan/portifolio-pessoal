@@ -35,7 +35,11 @@ const ProjectsSection = () => {
                 ))}
               </div>
               <div className="flex gap-4">
-                <a href={project.link} target="_blank" rel="noopener noreferrer">
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <Button variant="outline" size="sm">
                     <ExternalLink className="mr-2 h-4 w-4" />
                     Ver Projeto

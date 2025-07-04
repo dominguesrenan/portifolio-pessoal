@@ -1,67 +1,30 @@
 # Portifólio Pessoal
 
-## Aplicar todas as permissões
+## 🚀 Tecnologias Principais
 
-1. Leitura, escrita e execução:
+Este projeto utiliza as seguintes tecnologias e frameworks principais:
 
-```bash
-sudo chmod -R 777 ~/portifolio-pessoal
-```
+### Frontend
+- **React** com TypeScript
+- **Vite** como bundler
+- **Tailwind CSS** para estilização
+- **Shadcn UI** para componentes UI
+- **Next-themes** para suporte a tema claro/escuro
 
-## Execute o docker-compose
+### State Management e APIs
+- **TanStack Query** para gerenciamento de estado e requisições
+- **React Hook Form** com resolvers para forms
+- **Date-fns** para manipulação de datas
+- **Embla Carousel** para componentes de carousel
 
-```bash
-docker-compose up --build -d
-```
+### UI Components
+- **Radix UI** (base para componentes shadcn)
+- **Lucide React** para ícones
+- **Sonner** para notificações
+- **Input OTP** para campos de código
 
-## Verifique os arquivos
-
-```bash
-docker-compose exec web ls -la /app/src/data/
-```
-
-## Build
-
-```bash
-docker-compose exec web npm run build
-```
-
-## Acesso ao app
-
-1. Acesse o app em: [http://localhost:3000](http://localhost:3000)
-
-## Docker
-
-1. Remover todos os conteiners:
-
-```bash
-docker stop $(docker ps -a -q)
-docker rm $(docker ps -a -q)
-docker rmi $(docker images -q)
-docker volume rm $(docker volume ls -q)
-docker network prune -f
-clear
-```
-
-## Atualização do repositório
-
-### Enviar atualização para branch `main`
-
-1. Enviar atualização para branch `main`:
-
-```bash
-git add .
-
-git status
-
-git commit -m "Add/Imp | Portifolio Pessoal | $(date '+%d/%m/%Y - %H:%M:%S')"
-
-git push -uf origin main
-```
-
----
-
-## Links
-
-- [GitHub](https://github.com/dominguesrenan/portifolio-pessoal)
-- [LinkedIn](https://www.linkedin.com/in/renan-domingues-4808b2172/)
+### Infraestrutura
+- **Docker** com Docker Compose para containerização
+- **Nginx** como servidor web
+- **ESLint** para linting
+- **Prettier** para formatação automática de código

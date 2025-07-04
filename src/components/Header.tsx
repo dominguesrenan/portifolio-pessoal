@@ -31,20 +31,20 @@ const Header = () => {
   };
 
   const renderMenuItem = (item: any) => {
-    if (item.type === 'internal') {
+    if (item.type === "internal") {
       return (
-        <Link 
-          to={item.link} 
+        <Link
+          to={item.link}
           className="text-foreground hover:text-primary transition-colors"
           onClick={closeMenu}
         >
           {item.label}
         </Link>
       );
-    } else if (item.type === 'anchor') {
+    } else if (item.type === "anchor") {
       return (
-        <a 
-          href={item.link} 
+        <a
+          href={item.link}
           className="text-foreground hover:text-primary transition-colors"
           onClick={closeMenu}
         >
@@ -58,7 +58,9 @@ const Header = () => {
   return (
     <header
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? "bg-background/80 backdrop-blur-md shadow-sm" : "bg-transparent"
+        isScrolled
+          ? "bg-background/80 backdrop-blur-md shadow-sm"
+          : "bg-transparent"
       }`}
     >
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
@@ -69,9 +71,7 @@ const Header = () => {
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-6">
           {siteConfig.menu.map((item, index) => (
-            <div key={index}>
-              {renderMenuItem(item)}
-            </div>
+            <div key={index}>{renderMenuItem(item)}</div>
           ))}
           <ThemeToggle />
         </nav>

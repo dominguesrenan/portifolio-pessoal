@@ -11,17 +11,19 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <h3 className="text-xl font-bold text-foreground mb-4">{site.name}</h3>
+            <h3 className="text-xl font-bold text-foreground mb-4">
+              {site.name}
+            </h3>
             <p className="text-sm">{footer.description}</p>
           </div>
-          
+
           <div>
             <h3 className="text-lg font-semibold mb-4">Links Rápidos</h3>
             <ul className="space-y-2">
               {footer.links.map((link, index) => (
                 <li key={index}>
-                  <Link 
-                    to={link.link} 
+                  <Link
+                    to={link.link}
                     className="text-sm hover:text-primary transition-colors"
                   >
                     {link.label}
@@ -30,14 +32,14 @@ const Footer = () => {
               ))}
             </ul>
           </div>
-          
+
           <div>
             <h3 className="text-lg font-semibold mb-4">Redes Sociais</h3>
             <div className="flex space-x-4">
               {contact.social.github && (
-                <a 
-                  href={contact.social.github} 
-                  target="_blank" 
+                <a
+                  href={contact.social.github}
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
@@ -45,9 +47,9 @@ const Footer = () => {
                 </a>
               )}
               {contact.social.linkedin && (
-                <a 
-                  href={contact.social.linkedin} 
-                  target="_blank" 
+                <a
+                  href={contact.social.linkedin}
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
@@ -55,9 +57,9 @@ const Footer = () => {
                 </a>
               )}
               {contact.social.twitter && (
-                <a 
-                  href={contact.social.twitter} 
-                  target="_blank" 
+                <a
+                  href={contact.social.twitter}
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
@@ -65,7 +67,7 @@ const Footer = () => {
                 </a>
               )}
               {contact.info.email && (
-                <a 
+                <a
                   href={`mailto:${contact.info.email}`}
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
@@ -75,7 +77,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        
+
         <div className="border-t border-border mt-8 pt-8 text-center">
           <p className="text-sm">
             © {currentYear} {site.name}. Todos os direitos reservados.

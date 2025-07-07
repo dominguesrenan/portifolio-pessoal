@@ -50,12 +50,14 @@ const SkillCard = ({ skill, index }: SkillCardProps) => {
                 </CardTitle>
             </CardHeader>
             <CardContent>
-                {/* <div className="skill-bar">
-          <div 
-            className={`skill-progress ${bgColorClass}`}
-            style={{ width: `${animatedPercentage}%` }}
-          />
-        </div> */}
+                {/*
+                <div className="skill-bar">
+                    <div 
+                        className={`skill-progress ${bgColorClass}`}
+                        style={{ width: `${animatedPercentage}%` }}
+                    />
+                </div> 
+                */}
                 <p className="mt-2 text-sm capitalize text-muted-foreground">{skill.level}</p>
             </CardContent>
         </Card>

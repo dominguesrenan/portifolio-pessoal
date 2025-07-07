@@ -49,15 +49,15 @@ export const siteConfig = {
         image: '/src/assets/images/sobre_mim.jpeg',
         values: [
             {
-                title: '+30',
+                title: '+25',
                 description: 'Clientes Satisfeitos',
             },
             {
-                title: '+50',
+                title: '+2',
                 description: 'Projetos Completos',
             },
             {
-                title: '+5',
+                title: '+6',
                 description: 'Anos de Experiência',
             },
             {

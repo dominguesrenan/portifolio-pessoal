@@ -32,15 +32,15 @@ const AboutSection = () => {
                         <h3 className="text-2xl font-bold">
                             {about.subtitle || 'Olá, sou Renan Domingues'}
                         </h3>
-                        <p className="text-muted-foreground">
+                        <p className="text-justify text-muted-foreground">
                             {about.paragraph1 ||
                                 'Desenvolvedor Full Stack com mais de 5 anos de experiência criando aplicações web e móveis. Minha paixão é transformar ideias complexas em interfaces elegantes e funcionais.'}
                         </p>
-                        <p className="text-muted-foreground">
+                        <p className="text-justify text-muted-foreground">
                             {about.paragraph2 ||
                                 'Ao longo da minha carreira, trabalhei em diversos projetos, desde aplicações corporativas até startups inovadoras. Estou sempre buscando aprender novas tecnologias e aprimorar minhas habilidades para oferecer as melhores soluções.'}
                         </p>
-                        <p className="text-muted-foreground">
+                        <p className="text-justify text-muted-foreground">
                             {about.paragraph3 ||
                                 'Trabalho com tecnologias modernas como React com TypeScript, Tailwind CSS, Laravel, Node.js, além de possuir experiência com Docker, nginx e automações de build e deploy. Prezo por uma arquitetura limpa, componentes reutilizáveis e foco total na experiência do usuário.'}
                         </p>

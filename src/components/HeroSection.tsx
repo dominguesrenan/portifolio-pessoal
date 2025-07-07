@@ -29,8 +29,10 @@ const HeroSection = () => {
                     <h1 className="mb-4 text-4xl font-extrabold leading-tight md:text-6xl">
                         {hero.title}
                     </h1>
-                    <p className="mb-8 text-lg text-muted-foreground">{hero.subtitle}</p>
-                    <p className="mb-8">{hero.description}</p>
+                    <p className="mb-8 text-center text-lg text-muted-foreground">
+                        {hero.subtitle}
+                    </p>
+                    <p className="mb-8 text-justify">{hero.description}</p>
                     <div className="flex justify-center gap-4 md:justify-start">
                         {hero.buttons?.map((button, index) => (
                             <Button

@@ -1,22 +1,22 @@
 {
-  "name": "Portfólio Pessoal",
-  "short_name": "Portfólio",
-  "description": "Portfólio pessoal de desenvolvimento",
-  "start_url": "/",
-  "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#ffffff",
-  "icons": [
-    {
-      "src": "/favicon.ico",
-      "sizes": "64x64",
-      "type": "image/x-icon"
-    },
-    {
-      "src": "/assets/images/thumbnail_portifolio.png",
-      "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "any maskable"
-    }
-  ]
+    "name": "Portfólio Pessoal",
+    "short_name": "Portfólio",
+    "description": "Portfólio pessoal de desenvolvimento",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#ffffff",
+    "icons": [
+        {
+            "src": "/favicon.ico",
+            "sizes": "64x64",
+            "type": "image/x-icon"
+        },
+        {
+            "src": "/assets/images/thumbnail_portifolio.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ]
 }

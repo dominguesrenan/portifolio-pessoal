@@ -16,7 +16,7 @@ const ProjectsSection = () => {
                             <img
                                 src={project.image}
                                 alt={project.title}
-                                className="absolute inset-0 h-full w-full object-cover transition-transform animate-scroll"
+                                className="animate-scroll absolute inset-0 h-full w-full object-cover transition-transform"
                             />
                         </div>
                         <div className="p-6">

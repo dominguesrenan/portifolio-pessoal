@@ -1,106 +1,104 @@
-import { useState, useEffect } from "react";
-import { Button } from "@/components/ui/button";
-import { Menu } from "lucide-react";
-import ThemeToggle from "./ThemeToggle";
-import { Link } from "react-router-dom";
-import { siteConfig } from "@/data/site-config";
+import { useState, useEffect } from 'react';
+import { Button } from '@/components/ui/button';
+import { Menu } from 'lucide-react';
+import ThemeToggle from './ThemeToggle';
+import { Link } from 'react-router-dom';
+import { siteConfig } from '@/data/site-config';
 
 const Header = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const [isScrolled, setIsScrolled] = useState(false);
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 10) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > 10) {
+                setIsScrolled(true);
+            } else {
+                setIsScrolled(false);
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+
+    const toggleMobileMenu = () => {
+        setIsMobileMenuOpen(!isMobileMenuOpen);
     };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+    const closeMenu = () => {
+        setIsMobileMenuOpen(false);
+    };
 
-  const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen);
-  };
+    const renderMenuItem = (item: any) => {
+        if (item.type === 'internal') {
+            return (
+                <Link
+                    to={item.link}
+                    className="text-foreground transition-colors hover:text-primary"
+                    onClick={closeMenu}
+                >
+                    {item.label}
+                </Link>
+            );
+        } else if (item.type === 'anchor') {
+            return (
+                <a
+                    href={item.link}
+                    className="text-foreground transition-colors hover:text-primary"
+                    onClick={closeMenu}
+                >
+                    {item.label}
+                </a>
+            );
+        }
+        return null;
+    };
 
-  const closeMenu = () => {
-    setIsMobileMenuOpen(false);
-  };
-
-  const renderMenuItem = (item: any) => {
-    if (item.type === "internal") {
-      return (
-        <Link
-          to={item.link}
-          className="text-foreground hover:text-primary transition-colors"
-          onClick={closeMenu}
+    return (
+        <header
+            className={`fixed left-0 top-0 z-50 w-full transition-all duration-300 ${
+                isScrolled ? 'bg-background/80 shadow-sm backdrop-blur-md' : 'bg-transparent'
+            }`}
         >
-          {item.label}
-        </Link>
-      );
-    } else if (item.type === "anchor") {
-      return (
-        <a
-          href={item.link}
-          className="text-foreground hover:text-primary transition-colors"
-          onClick={closeMenu}
-        >
-          {item.label}
-        </a>
-      );
-    }
-    return null;
-  };
+            <div className="container mx-auto flex items-center justify-between px-4 py-4">
+                <Link to="/" className="text-2xl font-bold text-foreground">
+                    {siteConfig.site.name}
+                </Link>
 
-  return (
-    <header
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-        isScrolled
-          ? "bg-background/80 backdrop-blur-md shadow-sm"
-          : "bg-transparent"
-      }`}
-    >
-      <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-        <Link to="/" className="text-2xl font-bold text-foreground">
-          {siteConfig.site.name}
-        </Link>
+                {/* Desktop Navigation */}
+                <nav className="hidden items-center space-x-6 md:flex">
+                    {siteConfig.menu.map((item, index) => (
+                        <div key={index}>{renderMenuItem(item)}</div>
+                    ))}
+                    <ThemeToggle />
+                </nav>
 
-        {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x-6">
-          {siteConfig.menu.map((item, index) => (
-            <div key={index}>{renderMenuItem(item)}</div>
-          ))}
-          <ThemeToggle />
-        </nav>
-
-        {/* Mobile Menu Button */}
-        <div className="flex md:hidden items-center space-x-4">
-          <ThemeToggle />
-          <Button variant="ghost" size="icon" onClick={toggleMobileMenu}>
-            <Menu />
-          </Button>
-        </div>
-      </div>
-
-      {/* Mobile Navigation */}
-      <nav
-        className={`md:hidden bg-background border-t transition-all duration-300 overflow-hidden ${
-          isMobileMenuOpen ? "max-h-[300px]" : "max-h-0"
-        }`}
-      >
-        <div className="container mx-auto px-4 py-2 flex flex-col space-y-3">
-          {siteConfig.menu.map((item, index) => (
-            <div key={index} className="py-2">
-              {renderMenuItem(item)}
+                {/* Mobile Menu Button */}
+                <div className="flex items-center space-x-4 md:hidden">
+                    <ThemeToggle />
+                    <Button variant="ghost" size="icon" onClick={toggleMobileMenu}>
+                        <Menu />
+                    </Button>
+                </div>
             </div>
-          ))}
-        </div>
-      </nav>
-    </header>
-  );
+
+            {/* Mobile Navigation */}
+            <nav
+                className={`overflow-hidden border-t bg-background transition-all duration-300 md:hidden ${
+                    isMobileMenuOpen ? 'max-h-[300px]' : 'max-h-0'
+                }`}
+            >
+                <div className="container mx-auto flex flex-col space-y-3 px-4 py-2">
+                    {siteConfig.menu.map((item, index) => (
+                        <div key={index} className="py-2">
+                            {renderMenuItem(item)}
+                        </div>
+                    ))}
+                </div>
+            </nav>
+        </header>
+    );
 };
 
 export default Header;

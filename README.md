@@ -28,3 +28,7 @@ Este projeto utiliza as seguintes tecnologias e frameworks principais:
 - **Nginx** como servidor web
 - **ESLint** para linting
 - **Prettier** para formatação automática de código
+
+## 📚 Acessar aplicação
+
+- Acesse o portifólio em `http://localhost:3000`

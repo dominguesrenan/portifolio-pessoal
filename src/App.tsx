@@ -7,6 +7,9 @@ import Index from "./pages/Index";
 import Projects from "./pages/Projects";
 import NotFound from "./pages/NotFound";
 
+// import "@/styles/App.css" from "src/App.tsx". Does the file exist?
+import "@/styles/App.css";
+
 const queryClient = new QueryClient();
 
 const App = () => (

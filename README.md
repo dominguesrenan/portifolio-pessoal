@@ -32,3 +32,11 @@ Este projeto utiliza as seguintes tecnologias e frameworks principais:
 ## 📚 Acessar aplicação
 
 - Acesse o portifólio em `http://localhost:3000`
+
+## Desenvolvido por
+
+[**Renan Domingues**](https://www.linkedin.com/in/renan-domingues-4808b2172/)  
+👨‍💻 Desenvolvedor Full Stack
+
+[![GitHub](https://img.shields.io/badge/-renandomingues-181717?style=flat-square&logo=github&logoColor=white&link=https://github.com/renandomingues)](https://github.com/renandomingues)
+[![LinkedIn](https://img.shields.io/badge/-Renan%20Domingues-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/renan-domingues-4808b2172/)](https://www.linkedin.com/in/renan-domingues-4808b2172/)
